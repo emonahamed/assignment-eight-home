@@ -1,0 +1,21 @@
+.card {
+    width: 300px;
+    height: 450px;
+    border: 1px solid grey;
+    margin: 10px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sport-image {
+    width: 180px;
+}
+
+.card-btn {
+    padding: 8px 14px;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+}

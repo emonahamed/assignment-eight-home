@@ -1,10 +1,17 @@
 import React from 'react';
+import Singlesport from '../Singlesport/Singlesport';
 import './Sports.css'
 
-const Sports = () => {
+const Sports = ({ sports }) => {
+
+    // console.log(sports);
+
+
     return (
         <div>
-            <h1>i am from sports</h1>
+            <div className="card-container">
+                {sports.map(data => <Singlesport sport={data} key={data._id} ></Singlesport>)}
+            </div>
 
         </div>
     );

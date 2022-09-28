@@ -15,28 +15,13 @@ const Home = () => {
     }, [])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         <div>
             <div className="home-container">
                 <div className="left-side">
-                    <h1>All Players</h1>
+                    <h3>Todays Game plan</h3>
                     <div className="sports-container">
-                        <Sports></Sports>
+                        <Sports sports={sports}></Sports>
                     </div>
 
 
