@@ -58,7 +58,7 @@ const Home = () => {
                         <h2>Informations</h2>
                         <p>Name:Emon Ahamed</p>
                         <p>Age:25</p>
-                        <p>Height:5.7 inch</p>
+                        <p>Height:5 feet 7 inch</p>
                         <p>Weight: 55 Kg</p>
 
                         <h4>Add a Break</h4>
