@@ -3,3 +3,46 @@
     grid-template-columns: 3fr 1fr;
 
 }
+
+.cart {
+
+    border: 1px solid gray;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.break-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 2px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+}
+
+.btn-inside {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.excersize-details {
+    background-color: bisque;
+    padding: 1px;
+    margin: 8px;
+}
+
+.btn-activitycompleted {
+
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    margin: 15px;
+    border: none;
+    text: white;
+    width: 75%;
+}
