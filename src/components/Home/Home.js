@@ -6,6 +6,13 @@ const Home = () => {
 
     const [sports, setsports] = useState([]);
     const [cart, setCart] = useState([]);
+    const [time, settime] = useState('')
+
+    const handleBreak = (data) => {
+
+
+        settime(data);
+    }
 
 
     useEffect(() => {
@@ -26,7 +33,6 @@ const Home = () => {
     let total = 0;
     for (const product of cart) {
         total = total + product.timeNeeded;
-
 
     }
 
@@ -52,11 +58,11 @@ const Home = () => {
 
                         <h4>Add a Break</h4>
                         <div className="break-container">
-                            <button className='break-btn'>10m</button>
-                            <button className='break-btn'>20m</button>
-                            <button className='break-btn'>30m</button>
-                            <button className='break-btn'>40m</button>
-                            <button className='break-btn'>50m</button>
+                            <button onClick={() => handleBreak(10)} className='break-btn'>10m</button>
+                            <button onClick={() => handleBreak(20)} className='break-btn'>20m</button>
+                            <button onClick={() => handleBreak(30)} className='break-btn'>30m</button>
+                            <button onClick={() => handleBreak(40)} className='break-btn'>40m</button>
+                            <button onClick={() => handleBreak(50)} className='break-btn'>50m</button>
                         </div>
 
                         <h4>Excersize details</h4>
@@ -64,7 +70,7 @@ const Home = () => {
                             <p>Excersize Time:{total} min </p>
                         </div>
                         <div className='excersize-details'>
-                            <p>Break Time: </p>
+                            <p>Break Time:{time} </p>
                         </div>
 
                         <button className='btn-activitycompleted'>Activity Completed</button>
