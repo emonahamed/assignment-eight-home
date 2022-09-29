@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Sports from '../Sports/Sports';
 import './Home.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
+
+
 
     const [sports, setsports] = useState([]);
     const [cart, setCart] = useState([]);
@@ -35,6 +39,8 @@ const Home = () => {
 
 
     }
+
+    const notify = () => toast.success("we are done ", { position: "top-center" })
 
 
     return (
@@ -74,7 +80,8 @@ const Home = () => {
                             <p>Break Time: {localStorage.getItem('breaktime')} min </p>
                         </div>
 
-                        <button className='btn-activitycompleted'>Activity Completed</button>
+                        <button onClick={notify} className='btn-activitycompleted'>Activity Completed</button>
+                        <ToastContainer></ToastContainer>
                     </div>
                 </div>
 
