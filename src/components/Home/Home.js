@@ -9,8 +9,7 @@ const Home = () => {
     const [time, settime] = useState('')
 
     const handleBreak = (data) => {
-
-
+        localStorage.setItem('breaktime', data);
         settime(data);
     }
 
@@ -34,18 +33,18 @@ const Home = () => {
     for (const product of cart) {
         total = total + product.timeNeeded;
 
+
     }
 
 
     return (
         <div>
-            <div className="home-container">
-                <div className="left-side">
+            <div className="home-container ">
+                <div className="left-side " >
                     <h3>Todays Game plan</h3>
                     <div className="sports-container">
                         <Sports handleAddToCart={handleAddToCart} sports={sports}></Sports>
                     </div>
-
 
                 </div>
                 <div className="right-side">
@@ -65,17 +64,17 @@ const Home = () => {
                             <button onClick={() => handleBreak(50)} className='break-btn'>50m</button>
                         </div>
 
+
                         <h4>Excersize details</h4>
                         <div className='excersize-details'>
-                            <p>Excersize Time:{total} min </p>
+                            <p>GameplayTime: {total} min </p>
+
                         </div>
                         <div className='excersize-details'>
-                            <p>Break Time:{time} </p>
+                            <p>Break Time: {localStorage.getItem('breaktime')} min </p>
                         </div>
 
                         <button className='btn-activitycompleted'>Activity Completed</button>
-
-
                     </div>
                 </div>
 

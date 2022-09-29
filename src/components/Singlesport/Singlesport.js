@@ -11,7 +11,7 @@ const Singlesport = ({ sport, handleAddToCart }) => {
         <div className='card'>
             <img className='sport-image' src={picture} alt="" srcset="" />
             <h6>Title:{name}</h6>
-            <p>Time needed: {timeNeeded}min</p>
+            <p>Time Spent: {timeNeeded}min</p>
             <button onClick={() => handleAddToCart(sport)} className='card-btn'>Add To List</button>
         </div>
     );

@@ -49,3 +49,37 @@
     text: white;
     width: 75%;
 }
+
+.right-side {
+    margin: 30px;
+}
+
+
+
+
+
+@media screen and (max-width:767px) {
+    .home-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .home-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+}
+
+@media screen and (min-width:1024px) {}
