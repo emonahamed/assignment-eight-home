@@ -2,7 +2,7 @@ import React from 'react';
 import Singlesport from '../Singlesport/Singlesport';
 import './Sports.css'
 
-const Sports = ({ sports }) => {
+const Sports = ({ sports, handleAddToCart }) => {
 
     // console.log(sports);
 
@@ -10,7 +10,7 @@ const Sports = ({ sports }) => {
     return (
         <div>
             <div className="card-container">
-                {sports.map(data => <Singlesport sport={data} key={data._id} ></Singlesport>)}
+                {sports.map(data => <Singlesport handleAddToCart={handleAddToCart} sport={data} key={data._id} ></Singlesport>)}
             </div>
 
         </div>

@@ -5,6 +5,7 @@ import './Home.css'
 const Home = () => {
 
     const [sports, setsports] = useState([]);
+    const [cart, setCart] = useState([]);
 
 
     useEffect(() => {
@@ -15,13 +16,28 @@ const Home = () => {
     }, [])
 
 
+    const handleAddToCart = (sport) => {
+        console.log(sport);
+        const newCart = [...cart, sport];
+        setCart(newCart)
+    }
+
+    // console.log(cart)
+    let total = 0;
+    for (const product of cart) {
+        total = total + product.timeNeeded;
+
+
+    }
+
+
     return (
         <div>
             <div className="home-container">
                 <div className="left-side">
                     <h3>Todays Game plan</h3>
                     <div className="sports-container">
-                        <Sports sports={sports}></Sports>
+                        <Sports handleAddToCart={handleAddToCart} sports={sports}></Sports>
                     </div>
 
 
@@ -45,10 +61,10 @@ const Home = () => {
 
                         <h4>Excersize details</h4>
                         <div className='excersize-details'>
-                            <p>Excersize Time: <input className='btn-inside' type="text" /> </p>
+                            <p>Excersize Time:{total} min </p>
                         </div>
                         <div className='excersize-details'>
-                            <p>Break Time: <input className='btn-inside' type="text" /> </p>
+                            <p>Break Time: </p>
                         </div>
 
                         <button className='btn-activitycompleted'>Activity Completed</button>
